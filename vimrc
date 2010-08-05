@@ -23,10 +23,16 @@ colorscheme ir_black
 set linebreak
 set nu
 
-set guioptions-=T  "remove toolbar
+"remove toolbar in mvim
+set guioptions-=T
 
 " Let's force myself to use hjkl instead of the arrows
 map <up>    <Esc>
 map <down>  <Esc>
 map <left>  <Esc>
 map <right> <Esc>
+ 
+" highlight background of characters over 80 column limit
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
