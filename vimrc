@@ -24,3 +24,9 @@ set linebreak
 set nu
 
 set guioptions-=T  "remove toolbar
+
+" Let's force myself to use hjkl instead of the arrows
+map <up>    <Esc>
+map <down>  <Esc>
+map <left>  <Esc>
+map <right> <Esc>
