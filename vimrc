@@ -31,8 +31,12 @@ map <up>    <Esc>
 map <down>  <Esc>
 map <left>  <Esc>
 map <right> <Esc>
- 
+
 " highlight background of characters over 80 column limit
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" remove trailing spaces on save (kinda dangerous?)
+autocmd BufWritePre * :%s/(\S)\s\+$/\1/e
+
+set guifont=Monaco:h12
